@@ -60,7 +60,7 @@ server.get("/api/accounts", (req, res) => {
                 res.status(500).json({ message: "Something happened" }).end();
               });
           } else {
-            res.status(400).json({ message: "user could not be added" }).end();
+            res.status(400).json({ message: "User could not be added" }).end();
           }
         })
         .catch((err) => {
@@ -109,13 +109,13 @@ server.get("/api/accounts", (req, res) => {
   .del()
   .then(num => {
       if(num = 1){
-          res.status(204).json({message: "user deleted"}).end()
+          res.status(204).json({message: "User deleted"}).end()
       }else{
-          res.status(404).json({message: "user could not be found/deleted"}).end()
+          res.status(404).json({message: "User could not be found/deleted"}).end()
       }
   })
   .catch(err => {
-      res.status(500).json({message: "somethin went wrong"}).end()
+      res.status(500).json({message: "Something went wrong"}).end()
   })
   });
   
